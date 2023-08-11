@@ -1,0 +1,54 @@
+@import "../../../../styles.scss";
+
+main {
+  margin-top: 110px;
+  .box-title {
+    padding: 10px 0;
+    background-color: #e9ecef;
+    h3 {
+      margin-top: 40px;
+      font-family: "Lora", serif;
+    }
+    .default {
+      text-decoration: none;
+      color: #999999;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    .title {
+      font-size: 50px;
+    }
+  }
+  h4 {
+    padding-top: 25px;
+    font-family: "Lora", serif;
+  }
+  .about_thumb {
+    text-align: center;
+  }
+
+  .icon {
+    text-align: center;
+  }
+
+  .banner-about {
+    .content-about {
+      top: 18%;
+      transform: translateX(-8%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner-about {
+      .banner{
+        height: 700px;
+        object-fit: cover;
+      }
+      .content-about {
+        top: 5%;
+        transform: translateX(0%);
+      }
+    }
+  }
+}

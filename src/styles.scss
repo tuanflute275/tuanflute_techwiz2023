@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+//variable
+$main-color: #79a206;
+$white-color: #fff;
+$black-color: #222222;
+$black-color: #222;
+$grey-color: #ccc;
+$border-015: rgba(112, 112, 112, 0.15);
+$border-05: rgba(112, 112, 112, 0.5);
+$border-e8: #e8e8e8;
+
+//dark theme
+[data-theme="dark"] {
+  $main-color: black;
+  $white-color: #fff;
+}
+
+::selection {
+  color: $white-color;
+  background: $main-color;
+}
+
+//mixin
+@mixin button3($py, $px, $fz) {
+  button {
+    background: $main-color;
+    color: #fff;
+    text-decoration: none;
+    padding: $py $px;
+    border: none !important;
+    outline: none !important;
+    position: relative;
+    transition: 800ms ease all;
+    font-weight: bold;
+    font-size: $fz;
+  }
+  button:hover {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+  }
+  button:before,
+  button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: $main-color;
+    transition: 400ms ease all;
+  }
+  button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  button:hover:before,
+  button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+}
